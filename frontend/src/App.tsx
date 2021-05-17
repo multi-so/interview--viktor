@@ -19,7 +19,7 @@ export default function App() {
                             <Link to="/about">About</Link>
                         </li>
                         <li>
-                            <Link to="/users">Users</Link>
+                            <Link to="/rooms">Rooms</Link>
                         </li>
                     </ul>
                 </nav>
@@ -30,8 +30,8 @@ export default function App() {
                     <Route path="/about">
                         <About />
                     </Route>
-                    <Route path="/users">
-                        <Users />
+                    <Route path="/rooms">
+                        <Rooms />
                     </Route>
                     <Route path="/">
                         <Home />
@@ -43,13 +43,13 @@ export default function App() {
 }
 
 function Home() {
-    return <h2>Home</h2>;
+    return <h2>Welcome to Rondo 🤟</h2>;
 }
 
 function About() {
     return <h2>About</h2>;
 }
 
-function Users() {
-    return <h2>Users</h2>;
+function Rooms() {
+    return <h2>Room List</h2>;
 }
