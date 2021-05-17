@@ -5,3 +5,8 @@ export const countWords = (text) => {
 export const countCharacters = (text) => {
     return text.length
 }
+
+export const median = (numbers: number[]): number => {
+    numbers.sort()
+    return
+}

@@ -13,7 +13,11 @@ app.get('/health', (req, res) => {
   })
 })
 
-app.get('api/v1/room/{roomId}/messages', (req, res) => {
+app.get('api/v1/rooms', (req, res) => {
+  res.send('This endpoint should return ids to all rooms')
+})
+
+app.get('api/v1/rooms/{roomId}/messages', (req, res) => {
   res.send('This endpoint should return all messages from the room')
 })
 
@@ -22,11 +26,16 @@ app.get('api/v1/room/{roomId}/messages', (req, res) => {
 app.get('api/v1/analytics', (req, res) => {
   const roomsIds = req.query.param.roomsIds
   res.send({
-    averageNumberOfMessagesPerRoom: getAverageNumberOfMessagesForRooms(store, roomsIds)
+    averageNumberOfMessagesPerRoom: getAverageNumberOfMessagesForRooms(store, roomsIds),
+    medianNumberOfMessagesPerRoom: getMedianNumberOfMessagesForRooms(store, roomsIds)
   })
 })
 
 export const getAverageNumberOfMessagesForRooms = (store: Store, roomsIds: string[]): number => {
+  return 0
+}
+
+export const getMedianNumberOfMessagesForRooms = (store: Store, roomsIds: string[]): number => {
   return 0
 }
 
