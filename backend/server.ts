@@ -1,4 +1,4 @@
-import {MemoryStore} from "./src/store/memoryStore";
+import {MemoryStore} from "./src/store/memory-store";
 import {Store} from "./src/domain/store";
 
 const express = require('express')
