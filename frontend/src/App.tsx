@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
+import axios from "axios";
 
 export default function App() {
     return (
@@ -51,5 +52,16 @@ function About() {
 }
 
 function Rooms() {
+
+    useEffect(() => {
+        axios.get('/health')
+            .then(function (response) {
+                console.log(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+    });
+
     return <h2>Room List</h2>;
 }
