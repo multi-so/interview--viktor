@@ -1,5 +1,5 @@
 export const countWords = (text) => {
-    return text.split("\\s+").length;
+    return text.split(/\s+/).length;
 }
 
 export const countCharacters = (text) => {
@@ -8,5 +8,5 @@ export const countCharacters = (text) => {
 
 export const median = (numbers: number[]): number => {
     numbers.sort()
-    return
+    return numbers[Math.floor(numbers.length / 2)]
 }
