@@ -8,8 +8,3 @@ export class MemoryStore implements Store {
         return Promise.resolve([]);
     }
 }
-
-
-export const getRoomMessages = (roomId: string): Promise<Message[]> => {
-    return
-}
