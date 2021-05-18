@@ -1,5 +1,4 @@
 import {MemoryStore} from "./src/store/memory-store";
-import {Store} from "./src/domain/store";
 import {AnalyticsResults} from "./src/domain/analytics-results";
 
 const express = require('express')
@@ -25,7 +24,7 @@ app.get('api/v1/rooms/{roomId}/messages', (req, res) => {
 
 
 app.get('api/v1/analytics', (req, res) => {
-  const roomsIds = req.query.param.roomsIds
+  let roomsIds = req.query.param.roomsIds
   let result: AnalyticsResults = {
     averageNumberOfMessagesPerRoom: getAverageNumberOfMessagesForRooms(store, roomsIds),
     medianNumberOfMessagesPerRoom: getMedianNumberOfMessagesForRooms(store, roomsIds)
@@ -33,11 +32,11 @@ app.get('api/v1/analytics', (req, res) => {
   res.send(result)
 })
 
-export const getAverageNumberOfMessagesForRooms = (store: Store, roomsIds: string[]): number => {
+export const getAverageNumberOfMessagesForRooms = (store, roomsIds: string[]) => {
   return 0
 }
 
-export const getMedianNumberOfMessagesForRooms = (store: Store, roomsIds: string[]): number => {
+export const getMedianNumberOfMessagesForRooms = (store, roomsIds: string[]) => {
   return 0
 }
 

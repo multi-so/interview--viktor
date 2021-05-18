@@ -12,9 +12,9 @@ export const rooms = [{
     roomId: '-M_gdKLLldwDw56FoZYj',
     roomTitle: 'chess',
     messages: [{
-        text: 'I challenge you'
+        text: 'I am challenging you!'
     }, {
-        text: 'which modality?'
+        text: 'Which mode?'
     }, {
         text: 'Rapid chess is fine'
     }, {
