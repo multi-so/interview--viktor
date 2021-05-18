@@ -13,16 +13,6 @@ app.get('/health', (req, res) => {
   })
 })
 
-app.get('api/v1/rooms', (req, res) => {
-  res.send('This endpoint should return ids to all rooms')
-})
-
-app.get('api/v1/rooms/{roomId}/messages', (req, res) => {
-  res.send('This endpoint should return all messages from the room')
-})
-
-
-
 app.get('api/v1/analytics', (req, res) => {
   let roomsIds = req.query.param.roomsIds
   let result: AnalyticsResults = {
