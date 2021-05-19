@@ -16,17 +16,12 @@ app.get('/health', (req, res) => {
 app.get('api/v1/analytics', (req, res) => {
   let roomsIds = req.query.param.roomsIds
   let result: AnalyticsResults = {
-    averageNumberOfMessagesPerRoom: getAverageNumberOfMessagesForRooms(store, roomsIds),
-    medianNumberOfMessagesPerRoom: getMedianNumberOfMessagesForRooms(store, roomsIds)
+    medianNumberOfMessagesPerRoom: getMedianNumberOfMessagesForRooms(store)
   };
   res.send(result)
 })
 
-export const getAverageNumberOfMessagesForRooms = (store, roomsIds: string[]) => {
-  return 0
-}
-
-export const getMedianNumberOfMessagesForRooms = (store, roomsIds: string[]) => {
+export const getMedianNumberOfMessagesForRooms = (store) => {
   return 0
 }
 

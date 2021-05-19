@@ -1,8 +1,8 @@
-import {Message} from "../domain/message";
 import {Store} from "../domain/store";
+import {Room} from "../domain/room";
 
 export class MemoryStore implements Store {
-    getRoomMessages(roomId: string): Promise<Message[]> {
+    getRooms(): Promise<Room[]> {
         return Promise.resolve([]);
     }
 }

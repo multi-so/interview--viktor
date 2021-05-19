@@ -1,5 +1,5 @@
-import {Message} from "./message";
+import {Room} from "./room";
 
 export interface Store {
-    getRoomMessages: (roomId: string) => Promise<Message[]>
+    getRooms: () => Promise<Room[]>
 }
