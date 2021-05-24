@@ -13,7 +13,7 @@ app.get('/health', (req, res) => {
   })
 })
 
-app.get('api/v1/analytics', (req, res) => {
+app.get('/api/v1/analytics', (req, res) => {
   let result: AnalyticsResults = {
     medianNumberOfMessagesPerRoom: getMedianNumberOfMessagesForRooms(store)
   };
